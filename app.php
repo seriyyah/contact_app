@@ -100,7 +100,7 @@ try {
                       
                         <div class="contact-management col-4">
                           <a href="view_contacts.php?cid=<?php echo $res["contact_id"]; ?>" title='Посмотреть'><img src="image/icon-view2.png" alt="" ></a>
-                          <a href="contacts.php?m=update&cid=<?php echo $res["contact_id"]; ?>&pagenum=<?php echo $_GET["pagenum"]; ?>" title='Редактировать'><img src="image/icons8-edit3.png" alt=""></a>
+                          <a href="index.php?m=update&cid=<?php echo $res["contact_id"]; ?>&pagenum=<?php echo $_GET["pagenum"]; ?>" title='Редактировать'><img src="image/icons8-edit3.png" alt=""></a>
                           <a href="process_form.php?mode=delete&cid=<?php echo $res["contact_id"]; ?>&keyword=<?php echo $_GET["keyword"]; ?>&pagenum=<?php echo $_GET["pagenum"]; ?>" onclick="return confirm('Are you sure?')" title='Удалить'><img src="image/icons8-del4.png" alt=""></a>                                   
                         </div>                                                
                   </div>                                                 
