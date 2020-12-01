@@ -24,7 +24,7 @@ try {
         </div>        
         <div class="post-number"><?php echo $results[0]["contact_no"] ?></div>
         <?php foreach ($results as $res) { ?>
-            <div class="post-edit"><a href="index.php?m=update&cid=<?php echo $res["contact_id"]; ?>&pagenum=<?php echo $_GET["pagenum"]; ?>" ><button>Редактировать</button></a></div>
+            <div class="post-edit"><a href="index.php?m=update&cid=<?php echo $res["contact_id"]; ?>&pagenum=<?php echo $_GET["pagenum"]; ?>" ><button>Update</button></a></div>
         <?php } ?>
     </div>    
 </body>

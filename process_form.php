@@ -35,10 +35,10 @@ if ($mode == "add_new" ) {
       $result = $stmt->rowCount();
       if ($result > 0) {
         $_SESSION["errorType"] = "success";
-        $_SESSION["errorMsg"] = "Контакт успешно добавлен!.";
+        $_SESSION["errorMsg"] = "Contact successfully added.";
       } else {
         $_SESSION["errorType"] = "danger";
-        $_SESSION["errorMsg"] = "Что то пошло не так...контакт не добавлен!!.";
+        $_SESSION["errorMsg"] = "Something went wrong...couldn't add contact!!.";
       }
     } catch (Exception $ex) {
 
@@ -47,7 +47,7 @@ if ($mode == "add_new" ) {
     }
   } else {
     $_SESSION["errorType"] = "danger";
-    $_SESSION["errorMsg"] = "Что то пошло не так...фото не смогло загрузится!!!";
+    $_SESSION["errorMsg"] = "Something went wrong...couldn't add photo!!!";
   }
   header("location:app.php");
 } elseif ( $mode == "update_old" ) {
@@ -88,10 +88,10 @@ if ($mode == "add_new" ) {
       $result = $stmt->rowCount();
       if ($result > 0) {
         $_SESSION["errorType"] = "success";
-        $_SESSION["errorMsg"] = "Контакт успешно обновлён!.";
+        $_SESSION["errorMsg"] = "contact successfully updated!.";
       } else {
         $_SESSION["errorType"] = "info";
-        $_SESSION["errorMsg"] = "Вы не внесли не каких изминений контакту!";
+        $_SESSION["errorMsg"] = "There is nothing to update!!!";
       }
     } catch (Exception $ex) {
 
@@ -100,7 +100,7 @@ if ($mode == "add_new" ) {
     }
   } else {
     $_SESSION["errorType"] = "danger";
-    $_SESSION["errorMsg"] = "Не удалось загрузить фото!!!";
+    $_SESSION["errorMsg"] = "Something went wrong, could not upload the image!!!";
   }
   header("location:app.php?pagenum=".$_POST['pagenum']);
 } elseif ( $mode == "delete" ) {
@@ -116,10 +116,10 @@ if ($mode == "add_new" ) {
        $res = $stmt->rowCount();
        if ($res > 0) {
         $_SESSION["errorType"] = "success";
-        $_SESSION["errorMsg"] = "Контакт успешно удалён.";
+        $_SESSION["errorMsg"] = "Contact successfully deleted.";
       } else {
         $_SESSION["errorType"] = "info";
-        $_SESSION["errorMsg"] = "Не удалось удалить контакт!";
+        $_SESSION["errorMsg"] = "something went wrong could not delete the contact!";
       }
      
    } catch (Exception $ex) {

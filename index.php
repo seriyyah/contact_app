@@ -34,29 +34,29 @@ try {
         <div class="edit-form">  
          <div class="edit-initials">
             <div class="form-group">
-              <label class=" control-label" for="first_name"><span class="required">*</span>Имя:</label>
+              <label class=" control-label" for="first_name"><span class="required">*</span>Name:</label>
               <div class=" ">
                 <input type="text" value="<?php echo $results[0]["first_name"] ?>" placeholder="First Name" id="first_name" class="form-control" name="first_name" required><span id="first_name_err" class="error"></span>
               </div>
             </div>            
             <div class="form-group">
-              <label class="  control-label" for="last_name"><span class="required">*</span>Фамилия</label>
+              <label class="  control-label" for="last_name"><span class="required">*</span>Last Name</label>
               <div class=" ">
                 <input type="text" value="<?php echo $results[0]["last_name"] ?>" placeholder="Last Name" id="last_name" class="form-control" name="last_name" required><span id="last_name_err" class="error"></span>
               </div>
             </div>
         </div>        
             <div class="edit-number form-group ">
-              <label class=" control-label" for="contact_no"><span class="required">*</span>Номер</label>
+              <label class=" control-label" for="contact_no"><span class="required">*</span>Phone Number</label>
               <div class=" ">
                 <input type="text" value="<?php echo $results[0]["contact_no"] ?>" placeholder="Contact Number" id="contact_no" class="form-control" name="contact_no" required><span id="contact_no_err" class="error"></span>
-                <span class="help-block">мин 10 цыфр</span>
+                <span class="help-block">min 10 symbols</span>
               </div>
             </div>
         
 
         <div class="edit-image form-group">
-              <label class=" control-label" for="profile_pic">Фото</label>
+              <label class=" control-label" for="profile_pic">Upload Рhoto</label>
               <div class="edit-file">
                 <input type="file"  id="profile_pic" class="form-control file" name="profile_pic"><span id="profile_pic_err" class="error"></span>
                 <span class="help-block">jpg, jpeg, png, gif.</span>
@@ -75,7 +75,7 @@ try {
             ?>
             <div class="edit-button form-group ">
               <div class=" ">
-                <button class="" type="submit">Принять</button> 
+                <button class="" type="submit">Add</button> 
               </div>
             </div>
           </div>

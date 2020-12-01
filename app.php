@@ -65,7 +65,7 @@ try {
 
 <div class="notebook">    
   <header>
-      Контакты
+      Contacts
       <img src="image/1.png" alt="">
   </header>
   <?php if ($ERROR_MSG <> "") { ?>
@@ -81,11 +81,11 @@ try {
 <?php if (count($results) > 0) { ?>
        <div class="all-contact">       
               <div class="contact-title row">
-                  <p class='col-2'>Фото</p>
-                  <p class='col-2'> Имя</p>
-                  <p class='col-2'>Фамилия</p>
-                  <p class='col-2'>Телефон</p>
-                  <p class='col-4'>Управление контактом</p>
+                  <p class='col-2'>Picture</p>
+                  <p class='col-2'> Name</p>
+                  <p class='col-2'>L-Name</p>
+                  <p class='col-2'>Phone</p>
+                  <p class='col-4'>Configure</p>
               </div>                                     
             <?php foreach ($results as $res) { ?>
                 <div class="contact row">
@@ -99,9 +99,9 @@ try {
                         <div class="contact-number col-2"><?php echo $res["contact_no"]; ?>  </div>                       
                       
                         <div class="contact-management col-4">
-                          <a href="view_contacts.php?cid=<?php echo $res["contact_id"]; ?>" title='Посмотреть'><img src="image/icon-view2.png" alt="" ></a>
-                          <a href="index.php?m=update&cid=<?php echo $res["contact_id"]; ?>&pagenum=<?php echo $_GET["pagenum"]; ?>" title='Редактировать'><img src="image/icons8-edit3.png" alt=""></a>
-                          <a href="process_form.php?mode=delete&cid=<?php echo $res["contact_id"]; ?>&keyword=<?php echo $_GET["keyword"]; ?>&pagenum=<?php echo $_GET["pagenum"]; ?>" onclick="return confirm('Are you sure?')" title='Удалить'><img src="image/icons8-del4.png" alt=""></a>                                   
+                          <a href="view_contacts.php?cid=<?php echo $res["contact_id"]; ?>" title='view'><img src="image/icon-view2.png" alt="" ></a>
+                          <a href="index.php?m=update&cid=<?php echo $res["contact_id"]; ?>&pagenum=<?php echo $_GET["pagenum"]; ?>" title='update'><img src="image/icons8-edit3.png" alt=""></a>
+                          <a href="process_form.php?mode=delete&cid=<?php echo $res["contact_id"]; ?>&keyword=<?php echo $_GET["keyword"]; ?>&pagenum=<?php echo $_GET["pagenum"]; ?>" onclick="return confirm('Are you sure?')" title='delete'><img src="image/icons8-del4.png" alt=""></a>                                   
                         </div>                                                
                   </div>                                                 
             <?php } ?>
@@ -135,14 +135,14 @@ if (count($results) > 8) {
         </div>
 
           <?php } else { ?>
-        <div class="well well-lg">Нет контактов</div>
+        <div class="well well-lg">You don't have contact</div>
 <?php } ?>
     </div>
   </div>
 </div>
 
 <div class="add-contact">
-            <a href=""  data-toggle="modal" data-target="#modalContactForm"><button>Добавить контакт</button></a>
+            <a href=""  data-toggle="modal" data-target="#modalContactForm"><button>Add</button></a>
           </div> 
 
 
@@ -164,28 +164,28 @@ if (count($results) > 8) {
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Новый контакт</h4>
+        <h4 class="modal-title w-100 font-weight-bold">New Contact</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-add modal-body mx-3">
       <div class="form-group">
-              <label class=" " for="first_name"><span class="required">*</span>Имя:</label>
+              <label class=" " for="first_name"><span class="required">*</span>Name:</label>
               <div class=" ">
                 <input type="text"  placeholder="First Name" id="first_name" class="form-control" name="first_name" required><span id="first_name_err" class="error"></span>
               </div>
             </div>   
 
             <div class="form-group">
-              <label class=" " for="last_name"><span class="required">*</span>Фамилия</label>
+              <label class=" " for="last_name"><span class="required">*</span>Last Name</label>
               <div class=" ">
                 <input type="text"  placeholder="Last Name" id="last_name" class="form-control" name="last_name" required><span id="last_name_err" class="error"></span>
               </div>
             </div>
 
             <div class="form-group">
-              <label class=" " for="contact_no"><span class="required">*</span>Номер</label>
+              <label class=" " for="contact_no"><span class="required">*</span>Phone Number</label>
               <div class=" ">
                 <input type="text" placeholder="Contact Number" id="contact_no" class="form-control" name="contact_no" required><span id="contact_no_err" class="error"></span>
                 <span class="help-block">мин 10 цыфр</span>
@@ -193,7 +193,7 @@ if (count($results) > 8) {
             </div>
 
             <div class="form-group">
-              <label class=" control-label" for="profile_pic">Фото</label>
+              <label class=" control-label" for="profile_pic">Upload Рhoto</label>
               <div class=" ">
                 <input type="file"  id="profile_pic" class="new-picture form-control file" name="profile_pic" style='border:none'><span id="profile_pic_err" class="error"></span>
                 <span class="help-block">jpg, jpeg, png, gif.</span>
@@ -204,7 +204,7 @@ if (count($results) > 8) {
       <div class="modal-footer d-flex justify-content-center">
       <div class="form-group">
               <div class=" ">
-                <button class="new-contact" type="submit">Принять</button> 
+                <button class="new-contact" type="submit">Accept</button> 
               </div>
             </div>
       </div>

@@ -4,7 +4,7 @@ ob_start();
 session_start();
 
 define('DB_DRIVER', 'mysql');
-define('DB_SERVER', 'localhost:3308');
+define('DB_SERVER', 'localhost:3306');
 define('DB_SERVER_USERNAME', 'root');
 define('DB_SERVER_PASSWORD', '');
 define('DB_DATABASE', 'address_book');
